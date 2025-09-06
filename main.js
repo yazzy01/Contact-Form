@@ -132,6 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             console.log('Formulaire validé et soumis');
+            
+            // Add success animation
+            resultContainer.style.animation = 'fadeIn 0.5s ease-in-out';
+            
+            // Auto-hide success message after 3 seconds
+            setTimeout(() => {
+                resultContainer.style.display = 'none';
+            }, 3000);
         } else {
             // Afficher un message d'erreur général
             resultContainer.innerHTML = '<p>Veuillez corriger les erreurs dans le formulaire.</p>';

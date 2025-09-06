@@ -109,6 +109,89 @@ textarea.form-control {
     background-color: #fdedeb;
 }
 
+/* Enhanced styles by Yassir Rzigui */
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .container {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode h1,
+body.dark-mode label {
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark-mode .form-control:focus {
+    border-color: #4a9eff;
+    box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+body.dark-mode .result-container {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .result-container.success {
+    background-color: #2d4a3a;
+}
+
+body.dark-mode .result-container.error {
+    background-color: #4a2d2d;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Character counter styles */
+.character-counter {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .character-counter {
+    color: #aaa;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -119,7 +202,15 @@ textarea.form-control {
         padding: 10px;
     }
     
-    .btn {
+    .btn, .btn-secondary {
         padding: 10px 16px;
+        margin-top: 5px;
+        width: 100%;
+    }
+    
+    .dark-mode-btn {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 16px !important;
     }
 }
